@@ -13,6 +13,7 @@
     "email": "vscode@javiertinc.cl",
     "url": "https://javiertinc.cl"
   },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.105.0"
   },
@@ -35,7 +36,7 @@
         {
           "id": "jt-alium-container",
           "title": "jtAlium",
-          "icon": "$(paintcan)"
+          "icon": "resources/icon.svg"
         }
       ]
     },
@@ -45,7 +46,7 @@
           "id": "jt-alium.workspace-color",
           "name": "Workspace Color",
           "type": "webview",
-          "icon": "$(paintcan)"
+          "icon": "resources/icon.svg"
         }
       ]
     }
