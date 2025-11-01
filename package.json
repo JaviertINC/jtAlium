@@ -2,7 +2,7 @@
   "name": "jt-alium",
   "displayName": "jtAlium",
   "description": "¡Una extensión que alumbrará el camino de tus desarrollos!",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "icon": "resources/logo.png",
   "repository": {
     "type": "git",
@@ -25,9 +25,16 @@
   "keywords": [
     "Fun",
     "Color",
-    "Workspaces",
-    "Customizations"
+    "Workspace",
+    "Customization",
+    "Folder",
+    "File",
+    "Hide"
   ],
+  "galleryBanner": {
+    "color": "#ffa200",
+    "theme": "dark"
+  },
   "activationEvents": [
     "onView:jt-alium.panel"
   ],
@@ -37,6 +44,14 @@
       {
         "command": "jt-alium.openWorkspaceColor",
         "title": "jtAlium: Open Workspace Color"
+      },
+      {
+        "command": "jt-alium.openHideResources",
+        "title": "jtAlium: Open Hide Resources"
+      },
+      {
+        "command": "jt-alium.hideFile",
+        "title": "jtAlium: Hide this"
       }
     ],
     "viewsContainers": {
@@ -55,6 +70,21 @@
           "name": "Workspace Color",
           "type": "webview",
           "icon": "resources/icon.svg"
+        },
+        {
+          "id": "jt-alium.hide-resources",
+          "name": "Hide resources",
+          "type": "webview",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "jt-alium.hideFile",
+          "when": "resourceExtname != '' || explorerResourceIsFolder",
+          "group": "7_modification"
         }
       ]
     }

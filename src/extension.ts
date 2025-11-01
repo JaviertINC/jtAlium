@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 import { CommandService } from './core/services/commandService';
 import { WorkspaceColorProvider } from './views/workspace-color/WorkspaceColorProvider';
+import { HideResourcesProvider } from './views/hide-resources/HideResourcesProvider';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -15,13 +16,27 @@ export function activate(context: vscode.ExtensionContext) {
 	// Register the open workspace color command
 	const openWorkspaceColorDisposable = CommandService.registerOpenWorkspaceColorCommand();
 
+	// Register the open hide resources command
+	const openHideResourcesDisposable = CommandService.registerOpenHideResourcesCommand();
+
+	// Register the hide file command
+	const hideFileDisposable = CommandService.registerHideFileCommand();
+
 	// Register the workspace color provider
 	const workspaceColorProvider = new WorkspaceColorProvider(context.extensionUri);
 	context.subscriptions.push(
 		vscode.window.registerWebviewViewProvider(workspaceColorProvider.viewType, workspaceColorProvider)
 	);
 
+	// Register the hide resources provider
+	const hideResourcesProvider = new HideResourcesProvider(context.extensionUri);
+	context.subscriptions.push(
+		vscode.window.registerWebviewViewProvider(hideResourcesProvider.viewType, hideResourcesProvider)
+	);
+
 	context.subscriptions.push(openWorkspaceColorDisposable);
+	context.subscriptions.push(openHideResourcesDisposable);
+	context.subscriptions.push(hideFileDisposable);
 }
 
 // This method is called when your extension is deactivated
