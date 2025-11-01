@@ -3,6 +3,7 @@
   "displayName": "jtAlium",
   "description": "¡Una extensión que alumbrará el camino de tus desarrollos!",
   "version": "1.0.0",
+  "icon": "resources/logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/JaviertINC/jtAlium.git"
