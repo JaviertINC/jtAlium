@@ -20,9 +20,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 const themeData = this.getAttribute('data-theme');
                 if (themeData) {
                     const theme = JSON.parse(themeData);
+                    // Update custom color inputs with the selected theme colors
+                    document.getElementById('bg-color').value = theme.bg;
+                    document.getElementById('text-color').value = theme.text;
                     window.WebviewUtils.postMessageToExtension('applyTheme', {theme});
                 }
             }
         });
     });
+
+    // Handle custom theme button
+    const applyCustomThemeButton = document.getElementById('apply-custom-theme');
+    if (applyCustomThemeButton) {
+        applyCustomThemeButton.addEventListener('click', function() {
+            const bgColor = document.getElementById('bg-color').value;
+            const textColor = document.getElementById('text-color').value;
+            window.WebviewUtils.postMessageToExtension('applyCustomTheme', { bg: bgColor, text: textColor });
+        });
+    }
 });

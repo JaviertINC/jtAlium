@@ -31,6 +31,9 @@ export class WorkspaceColorProvider implements vscode.WebviewViewProvider, IWebv
                     case 'removeTheme':
                         await this.removeTheme();
                         break;
+                    case 'applyCustomTheme':
+                        await this.applyCustomTheme(message.bg, message.text);
+                        break;
                 }
             },
             undefined,
@@ -53,5 +56,17 @@ export class WorkspaceColorProvider implements vscode.WebviewViewProvider, IWebv
     private async removeTheme() {
         const config = vscode.workspace.getConfiguration();
         await config.update('workbench.colorCustomizations', undefined, vscode.ConfigurationTarget.Workspace);
+    }
+
+    private async applyCustomTheme(bg: string, text: string) {
+        const config = vscode.workspace.getConfiguration();
+        const colorCustomizations = {
+            "titleBar.activeBackground": bg,
+            "titleBar.activeForeground": text,
+            "titleBar.inactiveBackground": bg + "aa", // 66% opacity
+            "titleBar.inactiveForeground": text + "aa"
+        };
+
+        await config.update('workbench.colorCustomizations', colorCustomizations, vscode.ConfigurationTarget.Workspace);
     }
 }

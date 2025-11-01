@@ -2,7 +2,7 @@
   "name": "jt-alium",
   "displayName": "jtAlium",
   "description": "¡Una extensión que alumbrará el camino de tus desarrollos!",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "icon": "resources/logo.png",
   "repository": {
     "type": "git",
@@ -19,7 +19,14 @@
     "vscode": "^1.105.0"
   },
   "categories": [
+    "Visualization",
     "Other"
+  ],
+  "keywords": [
+    "Fun",
+    "Color",
+    "Workspaces",
+    "Customizations"
   ],
   "activationEvents": [
     "onView:jt-alium.panel"

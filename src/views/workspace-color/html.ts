@@ -19,6 +19,19 @@ export function getWorkspaceColorHtmlForWebview(webview: vscode.Webview, extensi
             <div class="grid">
                 ${generateThemeGrid()}
             </div>
+            <div class="custom-color">
+                <div class="input-colors">
+                    <div class="input-group">
+                        <label for="bg-color">Background:</label>
+                        <input type="color" id="bg-color" value="#ffffff">
+                    </div>
+                    <div class="input-group">
+                        <label for="text-color">Text:</label>
+                        <input type="color" id="text-color" value="#000000">
+                    </div>
+                </div>
+                <button id="apply-custom-theme" class="codicon codicon-check">Apply custom colors</button>
+            </div>
             <script nonce="${nonce}">
                 // WebviewUtils injection for communication with extension
                 const vscode = acquireVsCodeApi();
