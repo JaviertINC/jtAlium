@@ -13,6 +13,13 @@ export class CommandService {
         });
     }
 
+    public static registerOpenPackageVersionUpdaterCommand(): vscode.Disposable {
+        return vscode.commands.registerCommand('jt-alium.openPackageVersionUpdater', () => {
+            vscode.commands.executeCommand('workbench.view.extension.jt-alium-container', 'jt-alium.package-version-updater');
+        });
+    }
+
+
     public static registerHideFileCommand(): vscode.Disposable {
         return vscode.commands.registerCommand('jt-alium.hideFile', (uri: vscode.Uri) => {
             if (uri) {

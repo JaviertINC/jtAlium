@@ -4,20 +4,20 @@ import * as vscode from 'vscode';
 import { CommandService } from './core/services/commandService';
 import { WorkspaceColorProvider } from './views/workspace-color/WorkspaceColorProvider';
 import { HideResourcesProvider } from './views/hide-resources/HideResourcesProvider';
+import { PackageVersionUpdaterProvider } from './views/package-version-updater/PackageVersionUpdaterProvider';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('[jtAlium] ¡Todo bien!');
 
 	// Register the open workspace color command
 	const openWorkspaceColorDisposable = CommandService.registerOpenWorkspaceColorCommand();
 
 	// Register the open hide resources command
 	const openHideResourcesDisposable = CommandService.registerOpenHideResourcesCommand();
+
+	// Register the open package version updater command
+	const openPackageVersionUpdaterDisposable = CommandService.registerOpenPackageVersionUpdaterCommand();
 
 	// Register the hide file command
 	const hideFileDisposable = CommandService.registerHideFileCommand();
@@ -34,8 +34,15 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.registerWebviewViewProvider(hideResourcesProvider.viewType, hideResourcesProvider)
 	);
 
+	// Register the package version updater provider
+	const packageVersionUpdaterProvider = new PackageVersionUpdaterProvider(context.extensionUri);
+	context.subscriptions.push(
+		vscode.window.registerWebviewViewProvider(packageVersionUpdaterProvider.viewType, packageVersionUpdaterProvider)
+	);
+
 	context.subscriptions.push(openWorkspaceColorDisposable);
 	context.subscriptions.push(openHideResourcesDisposable);
+	context.subscriptions.push(openPackageVersionUpdaterDisposable);
 	context.subscriptions.push(hideFileDisposable);
 }
 

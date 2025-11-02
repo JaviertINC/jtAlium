@@ -1,5 +1,15 @@
 # Historial de cambios
 
+## v1.3.0
+
+- Se agrega la herramienta **Package Version Updater**.
+    - Escaneo automático de todos los archivos `package.json` en el workspace.
+    - Controles independientes para Major, Minor y Patch de cada paquete.
+    - Actualización en tiempo real de los archivos `package.json`.
+    - Orden inteligente: package.json root primero, luego alfabético.
+    - Click en el path para abrir el archivo directamente en el editor.
+    - Soporte para proyectos con múltiples paquetes (librerías Angular, monorepos, etc.).
+
 ## v1.2.0
 
 - Se agrega la herramienta **Hide Resources**.
@@ -22,7 +32,7 @@
 - [x] Workspace Color: Con temas predefinidos
 - [x] Workspace Color: Con temas personalizados
 - [x] Hide resources: Oculta carpetas o archivos que no necesitas ver
-- [ ] Package Version Updater: Major, Minor y patch
+- [x] Package Version Updater: Major, Minor y patch
 - [ ] Hides sensitive data: Para iPROPERTIES
 - [ ] Hides sensitive data: Para .env
 - [ ] Autoclose unused old tabs

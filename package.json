@@ -2,7 +2,7 @@
   "name": "jt-alium",
   "displayName": "jtAlium",
   "description": "¡Una extensión que alumbrará el camino de tus desarrollos!",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "icon": "resources/logo.png",
   "repository": {
     "type": "git",
@@ -50,6 +50,10 @@
         "title": "jtAlium: Open Hide Resources"
       },
       {
+        "command": "jt-alium.openPackageVersionUpdater",
+        "title": "jtAlium: Open Package Version Updater"
+      },
+      {
         "command": "jt-alium.hideFile",
         "title": "jtAlium: Hide this"
       }
@@ -76,6 +80,13 @@
           "name": "Hide resources",
           "type": "webview",
           "icon": "resources/icon.svg"
+        },
+        {
+          "id": "jt-alium.package-version-updater",
+          "name": "Package Version Updater",
+          "type": "webview",
+          "icon": "resources/icon.svg",
+          "contextualTitle": "Package Version Updater"
         }
       ]
     },
@@ -85,6 +96,13 @@
           "command": "jt-alium.hideFile",
           "when": "resourceExtname != '' || explorerResourceIsFolder",
           "group": "7_modification"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "jt-alium.refreshPackageVersionUpdater",
+          "when": "view == jt-alium.package-version-updater",
+          "group": "navigation"
         }
       ]
     }

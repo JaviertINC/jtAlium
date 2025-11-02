@@ -59,3 +59,25 @@ También puedes ocultar archivos directamente desde el explorador:
 - Selecciona "Hide this file/folder"
 
 ![Context Menu](https://javiertinc.github.io/media/jtAlium/jtAlium%20-%20Hide%20Resources%20-%20Context%20Menu.png)
+
+### Package Version Updater
+
+![jtAlium](https://javiertinc.github.io/media/jtAlium/gh-package-version-updater.png)
+
+Gestiona fácilmente las versiones de todos los archivos `package.json` en tu workspace. Perfecto para proyectos con múltiples paquetes (como librerías Angular) donde necesitas mantener sincronizadas las versiones de semantic versioning.
+
+#### Utilidades principales:
+- **Escaneo automático**: Encuentra todos los `package.json` en tu workspace, excluyendo carpetas como `node_modules`, `vendor`, `dist`, etc.
+- **Orden inteligente**: El `package.json` de la raíz aparece primero, seguido de los demás ordenados alfabéticamente.
+- **Controles independientes**: Cada paquete tiene controles separados para Major, Minor y Patch.
+- **Actualización en tiempo real**: Los cambios se guardan inmediatamente en los archivos `package.json`.
+- **Navegación rápida**: Click en el path del archivo para abrirlo directamente en el editor.
+
+#### Cómo usar:
+1. Abre la vista "Package Version Updater" desde el panel lateral de jtAlium
+2. Verás todos los `package.json` encontrados en tu workspace
+3. Para cada paquete, usa los botones "+" y "-" para incrementar/decrementar Major, Minor o Patch
+4. Los cambios se guardan automáticamente en el archivo correspondiente
+5. Click en el path del archivo (ej: `package.json` o `projects/utils/package.json`) para abrirlo en el editor
+
+![Package Version Updater](https://javiertinc.github.io/media/jtAlium/jtAlium%20-%20Package%20Version%20Updater.png)
