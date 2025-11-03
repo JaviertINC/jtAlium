@@ -10,3 +10,4 @@ pnpm-lock.yaml
 esbuild.js
 eslint.config.mjs
 tsconfig.json
+README.es.md

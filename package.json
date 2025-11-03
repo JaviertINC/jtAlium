@@ -1,7 +1,7 @@
 {
   "name": "jt-alium",
   "displayName": "jtAlium",
-  "description": "¡Una extensión que alumbrará el camino de tus desarrollos!",
+  "description": "An extension that will light the way for your developments!",
   "version": "1.3.1",
   "icon": "resources/logo.png",
   "repository": {
@@ -23,13 +23,18 @@
     "Other"
   ],
   "keywords": [
-    "Fun",
-    "Color",
+    "VSCode",
+    "Extension",
+    "Developer Tools",
     "Workspace",
+    "Color",
     "Customization",
-    "Folder",
     "File",
-    "Hide"
+    "Folder",
+    "Hide",
+    "Package Manager",
+    "Version Control",
+    "Fun"
   ],
   "galleryBanner": {
     "color": "#ffa200",
