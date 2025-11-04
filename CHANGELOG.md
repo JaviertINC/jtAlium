@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.4.0
+
+- Added the **Package Scripts Manager** tool.
+    - Automatic scanning of all `package.json` files in the workspace.
+    - Create, edit, run and delete scripts for each package.
+    - Execute npm scripts directly from the interface in new terminals.
+    - Inline editing of script commands.
+    - Add new scripts with custom names and commands.
+    - Delete scripts with confirmation dialog.
+    - Automatically clean empty `scripts` objects from package.json.
+    - Smart ordering: root package.json first, then alphabetical.
+    - Click on the path to open the file directly in the editor.
+    - Support for projects with multiple packages (Angular libraries, monorepos, etc.).
+- Updated the color palette with 17 vibrant colors and improved contrast ratios.
+- Refactored shared utilities for better code reusability.
+
 ## v1.3.1
 
 - Removed a forgotten viewTitle in package.json
@@ -39,7 +55,7 @@
 - [x] Workspace Color: With custom colors
 - [x] Hide resources: Hide folders or files you don't need to see
 - [x] Package Version Updater: Major, Minor and patch
-- [ ] Package Scripts Manager: Create, edit, run and delete
+- [x] Package Scripts Manager: Create, edit, run and delete
 - [ ] Hides sensitive data: For PROPERTIES
 - [ ] Hides sensitive data: For .env
 - [ ] Autoclose unused old tabs

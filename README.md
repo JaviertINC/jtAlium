@@ -83,3 +83,29 @@ Easily manage the versions of all `package.json` files in your workspace. Perfec
 5. Click on the file path (e.g.: `package.json` or `projects/utils/package.json`) to open it in the editor
 
 ![Package Version Updater](https://javiertinc.github.io/media/jtAlium/jtAlium%20-%20Package%20Version%20Updater.png)
+
+### Package Scripts Manager
+
+![jtAlium](https://javiertinc.github.io/media/jtAlium/gh-package-scripts-manager.png)
+
+Manage all scripts from your `package.json` files with ease. Perfect for projects with multiple packages where you need to create, edit, run and delete npm scripts efficiently.
+
+#### Main utilities:
+- **Automatic scanning**: Finds all `package.json` in your workspace, excluding folders like `node_modules`, `vendor`, `dist`, etc.
+- **Smart ordering**: The root `package.json` appears first, followed by the others sorted alphabetically.
+- **Script management**: Create, edit, run and delete scripts for each package.
+- **Run scripts**: Execute npm scripts directly from the interface, opening in new terminals.
+- **Inline editing**: Edit script commands directly in the interface.
+- **Add scripts**: Create new scripts with custom names and commands.
+- **Delete scripts**: Remove scripts with confirmation dialog.
+- **Clean package.json**: Automatically removes empty `scripts` objects when the last script is deleted.
+- **Quick navigation**: Click on the file path to open it directly in the editor.
+
+#### How to use:
+1. Open the "Package Scripts Manager" view from the jtAlium side panel
+2. You will see all the `package.json` found in your workspace with their scripts
+3. For each script, use the ▶ button to run it, ✎ to edit it, or × to delete it
+4. Use the "+ Add Script" button to create new scripts
+5. Click on the file path (e.g.: `package.json` or `projects/utils/package.json`) to open it in the editor
+
+![Package Scripts Manager](https://javiertinc.github.io/media/jtAlium/jtAlium%20-%20Package%20Scripts%20Manager.png)

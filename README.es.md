@@ -83,3 +83,29 @@ Gestiona fácilmente las versiones de todos los archivos `package.json` en tu wo
 5. Click en el path del archivo (ej: `package.json` o `projects/utils/package.json`) para abrirlo en el editor
 
 ![Package Version Updater](https://javiertinc.github.io/media/jtAlium/jtAlium%20-%20Package%20Version%20Updater.png)
+
+### Package Scripts Manager
+
+![jtAlium](https://javiertinc.github.io/media/jtAlium/gh-package-scripts-manager.png)
+
+Gestiona todos los scripts de tus archivos `package.json` con facilidad. Perfecto para proyectos con múltiples paquetes donde necesitas crear, editar, ejecutar y eliminar scripts npm de manera eficiente.
+
+#### Utilidades principales:
+- **Escaneo automático**: Encuentra todos los `package.json` en tu workspace, excluyendo carpetas como `node_modules`, `vendor`, `dist`, etc.
+- **Orden inteligente**: El `package.json` de la raíz aparece primero, seguido de los demás ordenados alfabéticamente.
+- **Gestión de scripts**: Crear, editar, ejecutar y eliminar scripts para cada paquete.
+- **Ejecutar scripts**: Ejecuta scripts npm directamente desde la interfaz, abriéndose en terminales nuevas.
+- **Edición en línea**: Edita comandos de scripts directamente en la interfaz.
+- **Agregar scripts**: Crea nuevos scripts con nombres y comandos personalizados.
+- **Eliminar scripts**: Remueve scripts con diálogo de confirmación.
+- **Package.json limpio**: Elimina automáticamente objetos `scripts` vacíos cuando se elimina el último script.
+- **Navegación rápida**: Click en el path del archivo para abrirlo directamente en el editor.
+
+#### Cómo usar:
+1. Abre la vista "Package Scripts Manager" desde el panel lateral de jtAlium
+2. Verás todos los `package.json` encontrados en tu workspace con sus scripts
+3. Para cada script, usa el botón ▶ para ejecutarlo, ✎ para editarlo, o × para eliminarlo
+4. Usa el botón "+ Add Script" para crear nuevos scripts
+5. Click en el path del archivo (ej: `package.json` o `projects/utils/package.json`) para abrirlo en el editor
+
+![Package Scripts Manager](https://javiertinc.github.io/media/jtAlium/jtAlium%20-%20Package%20Scripts%20Manager.png)

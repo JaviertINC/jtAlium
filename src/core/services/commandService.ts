@@ -19,6 +19,12 @@ export class CommandService {
         });
     }
 
+    public static registerOpenPackageScriptsManagerCommand(): vscode.Disposable {
+        return vscode.commands.registerCommand('jt-alium.openPackageScriptsManager', () => {
+            vscode.commands.executeCommand('workbench.view.extension.jt-alium-container', 'jt-alium.package-scripts-manager');
+        });
+    }
+
 
     public static registerHideFileCommand(): vscode.Disposable {
         return vscode.commands.registerCommand('jt-alium.hideFile', (uri: vscode.Uri) => {
